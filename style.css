@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f5ff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+.container {
+    width: 600px;
+    max-width: 95%;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+
+    padding: 25px;
+}
+
+/* HEADER */
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+.mic-icon {
+    font-size: 45px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.header p {
+    margin: 5px 0 0;
+
+    color: #666;
+}
+
+/* CHAT */
+
+.chat-box {
+    height: 400px;
+
+    overflow-y: auto;
+
+    background: #f7f7f7;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+}
+
+/* MESSAGE */
+
+.message {
+    max-width: 80%;
+
+    padding: 12px 16px;
+
+    margin-bottom: 15px;
+
+    border-radius: 15px;
+
+    line-height: 1.5;
+}
+
+.message p {
+    margin: 5px 0 0;
+}
+
+.message-label {
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+/* ASSISTANT MESSAGE */
+
+.assistant-message {
+    background: #e8e7ff;
+
+    margin-right: auto;
+}
+
+/* USER MESSAGE */
+
+.user-message {
+    background: #4f46e5;
+
+    color: white;
+
+    margin-left: auto;
+}
+
+/* BUTTONS */
+
+.controls {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+}
+
+button {
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 14px 22px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+#startButton {
+    background: #4f46e5;
+
+    color: white;
+}
+
+#startButton:hover {
+    background: #3730a3;
+}
+
+#clearButton {
+    background: #e5e7eb;
+
+    color: #333;
+}
+
+#clearButton:hover {
+    background: #d1d5db;
+}
+
+/* LISTENING STATE */
+
+.listening {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 18px;
+    }
+
+    .header h1 {
+        font-size: 23px;
+    }
+
+    .chat-box {
+        height: 350px;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+}
